@@ -28,6 +28,20 @@ export default function Page() {
           desc="This is a website I made as a fun, with my cousin who's a mordern artist, this website is a cyberpunk themed website. It has been evolving since I started learning web development. I'm proud of the work I did. I'm stkill learning new things, and I'm making this website as a side project. I hope you enjoy it as much as I do. *This website is not finished yet.*"
           redirectLink="https://cybertoys.vercel.app"
         />
+        <WorkContainer
+          alt="hello"
+          imag="https://ashikpy.tech/cybertoys.png"
+          title="CyberToys"
+          desc="This is a website I made as a fun, with my cousin who's a mordern artist, this website is a cyberpunk themed website. It has been evolving since I started learning web development. I'm proud of the work I did. I'm stkill learning new things, and I'm making this website as a side project. I hope you enjoy it as much as I do. *This website is not finished yet.*"
+          redirectLink="https://cybertoys.vercel.app"
+        />
+        <WorkContainer
+          alt="hello"
+          imag="https://ashikpy.tech/ashbio.png"
+          title="Ashik's Portfolio"
+          desc="My Portfolio website, this website is actually my first ever project. It has been evolving since I started learning web development. I'm proud of the work I did. I'm stkill learning new things, and I'm making this website as a side project. I hope you enjoy it as much as I do."
+          redirectLink="https://ashbio.vercel.app"
+        />
       </div>
     </div>
   );
