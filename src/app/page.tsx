@@ -74,7 +74,7 @@ function Content() {
       </div>
       <div className="mt-4">
         More Enhanced Portfolio{" "}
-        <CustomBadge text="here" link="https://ashikpy.tech" />
+        <CustomBadge text="here" link="https://ashbio.vercel.tech" />
       </div>
     </div>
   );
