@@ -1,5 +1,9 @@
 "use client";
+import { AiOutlineHome } from "react-icons/ai";
 
+import { BiPhoneCall } from "react-icons/bi";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { AiFillHome } from "react-icons/ai";
 import React, { useState } from "react";
 import { CircleX, Menu, MessageCircle } from "lucide-react";
 import Link from "next/link";
@@ -16,9 +20,23 @@ export default function Navbar() {
       <MobileNav handleClick={handleClick} isOpen={isOpen} />
       <div className="border rounded-full bg-muted mb-4 px-2">
         <ul className="flex justify-between items-center p-3 ">
-          <li className="">
+          <li className="md:hidden">
             <Menu className="size-4 cursor-pointer" onClick={handleClick} />
           </li>
+          <div className="hidden items-center gap-4 text-sm md:flex">
+            <Link href="/" className="flex items-center gap-2">
+              <AiOutlineHome />
+              <p>Home</p>
+            </Link>
+            <Link href="/works" className="flex items-center gap-2">
+              <AiOutlineFundProjectionScreen />
+              <p>Projects</p>
+            </Link>
+            <Link href="#contact" className="flex items-center gap-2">
+              <BiPhoneCall />
+              <p>Contact</p>
+            </Link>
+          </div>
           <li className="flex items-center gap-2">
             <MessageCircle className="size-4 cursor-pointer" />
             <p>Say Hi!</p>

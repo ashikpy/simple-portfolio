@@ -21,6 +21,7 @@ import Image from "next/image";
 import { DiCss3 } from "react-icons/di";
 import { FaHtml5 } from "react-icons/fa";
 import CustomBadge from "@/components/ui/custom-badge";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -82,11 +83,36 @@ function Content() {
 
 function Socials() {
   const socialLinks = [
-    { icon: Github, label: "Github", username: "ashikpy" },
-    { icon: Linkedin, label: "Linkedin", username: "ashikpy" },
-    { icon: Twitter, label: "X", username: "DeepFeel13" },
-    { icon: Youtube, label: "Youtube", username: "Ash Codes!" },
-    { icon: Mail, label: "Mail", username: "ashikofficial455@gmail.com" },
+    {
+      icon: Github,
+      label: "Github",
+      username: "ashikpy",
+      link: "https://github.com/ashikpy",
+    },
+    {
+      icon: Linkedin,
+      label: "Linkedin",
+      username: "ashikpy",
+      link: "https://www.linkedin.com/in/ashikpy/",
+    },
+    {
+      icon: Twitter,
+      label: "X",
+      username: "DeepFeel13",
+      link: "https://x.com/DeepFeel13",
+    },
+    {
+      icon: Youtube,
+      label: "Youtube",
+      username: "Ash Codes!",
+      link: "https://www.youtube.com/@imdefnotash",
+    },
+    {
+      icon: Mail,
+      label: "Mail",
+      username: "ashikofficial455@gmail.com",
+      link: "mailto:ashikofficial455@gmail.com",
+    },
   ];
 
   return (
@@ -101,6 +127,7 @@ function Socials() {
             username={social.username}
             isFirst={index === 0}
             isLast={index === socialLinks.length - 1}
+            link={social.link}
           />
         ))}
       </div>
@@ -114,16 +141,19 @@ function SocialLink({
   username,
   isFirst,
   isLast,
+  link,
 }: {
   icon: LucideIcon;
   label: string;
   username: string;
   isFirst: boolean;
   isLast: boolean;
+  link: string;
 }) {
   return (
-    <div
-      className={`border flex items-center gap-2 p-2 ${
+    <Link
+      href={link}
+      className={`border flex items-center gap-2 hover:bg-muted duration-400 p-2 ${
         isFirst ? "rounded-t-2xl" : ""
       } ${isLast ? "rounded-b-2xl" : ""}`}
     >
@@ -132,7 +162,7 @@ function SocialLink({
       <p>{label}</p>
       <p className="font-black">/</p>
       <p className="text-foreground/30 font-semibold">{username}</p>
-    </div>
+    </Link>
   );
 }
 
