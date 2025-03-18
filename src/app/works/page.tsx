@@ -2,8 +2,6 @@ import Image from "next/image";
 
 import React from "react";
 
-// hello
-
 export default function Page() {
   return (
     <div className="mt-10">
