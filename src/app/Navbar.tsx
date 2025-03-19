@@ -3,7 +3,7 @@ import { AiOutlineHome } from "react-icons/ai";
 
 import { BiPhoneCall } from "react-icons/bi";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { AiFillHome } from "react-icons/ai";
+
 import React, { useState } from "react";
 import { CircleX, Menu, MessageCircle } from "lucide-react";
 import Link from "next/link";
@@ -39,7 +39,7 @@ export default function Navbar() {
           </div>
           <li className="flex items-center gap-2">
             <MessageCircle className="size-4 cursor-pointer" />
-            <p>Say Hi!</p>
+            <a href="mailto:ashikofficial455@gmail.com">Say Hi!</a>
           </li>
         </ul>
       </div>
